@@ -1,7 +1,7 @@
 class HomePage {
   visit() {
     cy.visit("/");
-    this.clickAcceptAllButton();
+    //this.clickAcceptAllButton();
   }
 
   get acceptAllButton() {
