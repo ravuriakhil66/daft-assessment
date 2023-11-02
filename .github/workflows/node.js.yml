@@ -1,29 +1,23 @@
-name: Cypress CICD Tests using Cypress Docker Image
-
-on: [push]
-
+name: Cypress Tests
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
-  cypress-run:
+  test:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
-    strategy:
-      fail-fast: false
-      matrix:
-        # run copies of the current job in parallel
-        containers: [1, 2]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: "Cypress chrome tests"
-        uses: cypress-io/github-action@v5
-        with:
-          # Specify Browser 
-          browser: chrome
-          record: true
-          parallel: true
-          spec: cypress/e2e/specs/*.spec.cy.js
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Install dependencies
+      run: npm ci
+    - name: Install deps
+      run: npm install
+    - name: Run Cypress tests
+      run: npm run test-chrome
         
       
