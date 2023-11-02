@@ -25,6 +25,5 @@ jobs:
           record: true
           parallel: true
           spec: cypress/e2e/specs/*.spec.cy.js
-        env:
-          CYPRESS_RECORD_KEY: "7e729887-97ff-49c6-bd17-2680d3b67ec1"
+        
       
