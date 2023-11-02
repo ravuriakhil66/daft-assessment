@@ -1,10 +1,10 @@
-# Cypress Examples
+# Cypress Assessment
 
-This repository contains example Cypress tests showcasing best practices and advanced features.
+This repository contains cypress tests
 
 ## Prerequisites
 
-Before running the Cypress tests, ensure you have the following dependencies installed:
+Before running the Cypress tests, ensure have the following dependencies installed:
 
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 
