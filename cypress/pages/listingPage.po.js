@@ -32,15 +32,15 @@ class ListingPage {
     this.filterGarageSearchBox.clear().type(keyword);
     try {
       this.surveyButton.click();
-      this.showResults.click();
+      this.showResults.click().wait(1000);
     } catch (e) {
       console.warn("Survery Alert not displayed");
-      this.showResults.click().wait(500);
+      this.showResults.click().wait(1000);
     }
   }
 
   openFirstResult() {
-    this.resultsImageCard.eq(2).click().wait(500);
+    this.resultsImageCard.eq(2).click().wait(1000);
   }
 }
 
