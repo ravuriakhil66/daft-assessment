@@ -17,7 +17,7 @@ Before running the Cypress tests, ensure you have the following dependencies ins
 
    ```
 
-2. Change directory to the project directory
+2. Change the directory to the project directory
 
 cd project root
 
@@ -27,13 +27,13 @@ cd project root
 npm install
 ```
 
-4. To open testrunner, run the following command
+4. To open Testrunner, run the following command
 
 ```
 npx cypress test
 ```
 
-5. To use runmode, run the following command
+5. To use run mode, run the following command
 
 ```
  npm run test-chrome
